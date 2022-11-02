@@ -31,7 +31,7 @@ FILE* openfile(const char* filename, const char* mode)
     if((fstream = fopen(filename, mode)) == NULL)
     {
         printf("No such file");
-        exit(-1);
+        exit(EXIT_FAILURE);
     }
 
     return fstream;
