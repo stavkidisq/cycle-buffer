@@ -70,7 +70,7 @@ void rfillbuff(unsigned short int* buff)
 {
     printf("Rotate filling...\n");
 
-    unsigned int imax = BUFF_COUNT - 1;
+    unsigned short int imax = BUFF_COUNT - 1;
 
     for (unsigned short int i = 0; i <= imax; i++)
     {
