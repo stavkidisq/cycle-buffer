@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "file.cpp"
+#include "file.h"
 
 const int BUFF_SIZE = 32000;
 const int N = 5;
@@ -51,7 +51,7 @@ int main()
     free(straight_buff);
     free(rotate_buff);
 
-    printf("Program was exit.");
+    printf("Program was exit successfully!");
 
     return 0;
 }
@@ -107,8 +107,8 @@ void swap_buff_items(unsigned short int* buff)
     for(unsigned short int i = 1; i < BUFF_COUNT; i+=2)
     {
         temp = buff[i];
-        buff[i] = buff[i-1];
-        buff[i-1] = temp;
+        buff[i] = buff[i - 1];
+        buff[i - 1] = temp;
     }
 }
 
@@ -121,7 +121,7 @@ unsigned short int* initbuff()
     if(buff == NULL)
     {
         printf("Failed to allocate, aborting...\n");
-        exit(-1);
+        exit(EXIT_FAILURE);
     }
 
     return buff;
